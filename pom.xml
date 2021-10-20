@@ -49,10 +49,10 @@
     </build>
 
     <scm>
+        <url>https:://github.com/arafat0007/Spring-Pet-Clinic.git</url>
+        <connection>scm:git:https:://github.com/arafat0007/Spring-Pet-Clinic.git</connection>
         <developerConnection>scm:git:https://github.com/arafat0007/Spring-Pet-Clinic.git</developerConnection>
         <tag>HEAD</tag>
-<!--      <url>https:://github.com/arafat0007/Spring-Pet-Clinic</url>-->
-<!--        <connection>scm:git:https:://github.com/arafat0007/Spring-Pet-Clinic.git</connection>-->
   </scm>
 
 </project>
