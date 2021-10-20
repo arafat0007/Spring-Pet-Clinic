@@ -50,7 +50,7 @@
     </build>
 
     <scm>
-        <developerConnection>scm:git:git@https://github.com/arafat0007/MyVersionOfSpringPetClinic.git</developerConnection>
+        <developerConnection>scm:git:git@https://github.com/arafat0007/Spring-Pet-Clinic.git</developerConnection>
     </scm>
 
 </project>
