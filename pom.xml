@@ -4,7 +4,7 @@
 
     <artifactId>Pet-Clinic</artifactId>
     <groupId>com.example</groupId>
-    <version>0.0.1</version>
+    <version>0.0.1-SNAPSHOT</version>
 
     <packaging>pom</packaging>
     <modules>
