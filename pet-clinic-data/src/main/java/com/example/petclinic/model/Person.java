@@ -1,23 +1,26 @@
 package com.example.petclinic.model;
 
-public class Person {
+import lombok.*;
 
-    private String firstName;
-    private String lastName;
+import javax.persistence.Column;
+import javax.persistence.MappedSuperclass;
 
-    public String getFirstName() {
-        return firstName;
-    }
+@MappedSuperclass
+@Setter //lombok annotation
+@Getter  //lombok annotation
+@NoArgsConstructor
+@AllArgsConstructor
+public class Person extends BaseEntity{
 
-    public void setFirstName(String firstName) {
+    public Person(Long id, String firstName, String lastName) {
+        super(id);
         this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
+    @Column(name = "first_name")
+    private String firstName;
+
+    @Column(name = "last_name")
+    private String lastName;
 }

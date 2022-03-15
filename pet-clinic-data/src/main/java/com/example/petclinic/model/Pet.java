@@ -1,34 +1,36 @@
 package com.example.petclinic.model;
 
+import lombok.*;
+
+import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
-public class Pet {
+@Entity
+@Setter //lombok annotation
+@Getter  //lombok annotation
+@NoArgsConstructor //lombok annotation
+@AllArgsConstructor //lombok annotation
+@Builder //lombok annotation
+@Table(name = "pets")
+public class Pet extends BaseEntity{
 
+    @Column(name = "name")
+    private String name;
+
+    @ManyToOne
+    @JoinColumn(name = "type_id")
     private PetType petType;
+
+    @ManyToOne
+    @JoinColumn(name = "owner_id")
     private Owner owner;
+
+    @Column(name = "birthDate")
     private LocalDate birthDate;
 
-    public PetType getPetType() {
-        return petType;
-    }
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "pet")
+    private Set<Visit> visits = new HashSet<>();
 
-    public void setPetType(PetType petType) {
-        this.petType = petType;
-    }
-
-    public Owner getOwner() {
-        return owner;
-    }
-
-    public void setOwner(Owner owner) {
-        this.owner = owner;
-    }
-
-    public LocalDate getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(LocalDate birthDate) {
-        this.birthDate = birthDate;
-    }
 }

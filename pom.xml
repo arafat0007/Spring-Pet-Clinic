@@ -4,7 +4,7 @@
 
     <artifactId>Pet-Clinic</artifactId>
     <groupId>com.example</groupId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
 
     <packaging>pom</packaging>
     <modules>
@@ -42,7 +42,7 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
                 <configuration>
-                    <goal>install</goal>
+                    <goals>install</goals>
                 </configuration>
             </plugin>
         </plugins>
@@ -52,7 +52,7 @@
 <!--        <url>https:://github.com/arafat0007/Spring-Pet-Clinic.git</url>-->
 <!--        <connection>scm:git:https:://github.com/arafat0007/Spring-Pet-Clinic.git</connection>-->
         <developerConnection>scm:git:https://github.com/arafat0007/Spring-Pet-Clinic.git</developerConnection>
-<!--        <tag>HEAD</tag>-->
+        <tag>HEAD</tag>
   </scm>
 
 </project>

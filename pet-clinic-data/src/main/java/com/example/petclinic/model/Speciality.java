@@ -12,9 +12,9 @@ import javax.persistence.Table;
 @NoArgsConstructor //lombok annotation
 @AllArgsConstructor //lombok annotation
 @Builder //lombok annotation
-@Table(name = "types")
-public class PetType extends BaseEntity{
+@Table(name = "specialities")
+public class Speciality extends BaseEntity{
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "description")
+    private String description;
 }
