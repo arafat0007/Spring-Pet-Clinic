@@ -33,7 +33,9 @@ jobs:
           paths:
             - ~/.m2
           key: spring-pet-clinic-{{ checksum "pom.xml" }}
- 
+
+      - run: mvn install -DskipTests        
+
       - run: mvn dependency:go-offline
  
       # Then run your tests!
